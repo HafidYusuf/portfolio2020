@@ -1,0 +1,686 @@
+
+@font-face {
+    font-family: Edo;
+    src: url(Fonts/edosz.ttf);
+}
+@font-face {
+    font-family: Univers-Light;
+    src: url(Fonts/UniversLTStd-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: Quicksand
+    src: url(Fonts/Quicksand-Regular.otf);
+}
+@font-face {
+    font-family: Univers;
+    src: url(Fonts/UniversLTStd.otf);
+}
+@font-face {
+    font-family: Univers-Bold;
+    src: url(Fonts/UniversLTStd-Bold.otf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Quicksand;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background: rgba(44,44,114,1);
+    background: -moz-linear-gradient(75deg, rgba(44,44,114,1) 0%, rgba(206,64,116,1) 100%);
+    background: -webkit-linear-gradient(75deg, rgba(44,44,114,1) 0%, rgba(206,64,116,1) 100%);
+    background: -o-linear-gradient(75deg, rgba(44,44,114,1) 0%, rgba(206,64,116,1) 100%);
+    background: -ms-linear-gradient(75deg, rgba(44,44,114,1) 0%, rgba(206,64,116,1) 100%);
+    background: linear-gradient(75deg, rgba(44,44,114,1) 0%, rgba(206,64,116,1) 100%);
+    background-image: url(Ingredients/BG/Corak.png), linear-gradient(75deg, rgba(44,44,114,1) 0%, rgba(206,64,116,1) 100%);
+    background-position: top;
+    background-size: cover;
+    overflow-x: hidden;
+}
+.sponsor {
+    width: auto;
+    padding: 60px;
+    padding-bottom: 0;
+}
+.sponsor a img{
+    width: 40px;
+    height: auto;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.new-sponsor {
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+.new-sponsor a img{
+    width: 40px;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+nav {
+    position: fixed;
+    top: 80;
+    right: 80;
+    width: 330px;
+    height: auto;
+    z-index: 999;
+}
+.menu {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    transform: rotate(30deg);
+}
+.nav-line {
+    height: 2px;
+    width: 100px;
+    background: orange;
+    display: inline-block;
+}
+nav span {
+    font-size: 10pt;
+    margin-left: 30px;
+    letter-spacing: 10px;
+}
+.menu div {
+    width: 100%;
+    height: 3px;
+    background: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.menu div:nth-child(odd) {
+    width: 70%;
+}
+.container {
+    position: relative;
+    height: 70%;
+    text-align: center;
+}
+.logo {
+    width: 45%;
+    opacity: 0;
+    vertical-align: middle;
+    transition: all 1s cubic-bezier(.21,.9,.22,1);
+}
+.co-logo {
+    width: 36%;
+    transform: translateY(-10px);
+    opacity: 0;
+    vertical-align: middle;
+    transition: all 1s cubic-bezier(.21,.9,.22,1);
+}
+.socmed {
+    position: absolute;
+    right: 50px;
+    top: 33%;
+    width: 30px;
+}
+.socmed a img{
+    width: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.eighteen {
+    position: absolute;
+    right: 50;
+    top: 50%;
+    font-family: Univers-Bold;
+    font-size: 280pt;
+    opacity: 0.1;
+    z-index: -1;
+}
+.scroll {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    bottom: 0;
+}
+.scroll img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 40px;
+}
+.scroll span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 12pt;
+    margin: 0 auto;
+}
+.wheel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 3px;
+    height: 8px;
+    margin: 0 auto;
+    margin-top: 8px;
+    background: white;
+    border-radius: 30%;
+    animation-name: wheel;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes wheel {
+    0% {opacity: 0;transform: translateY(0px)}
+    20% {opacity: 100;}
+    60% {opacity: 100;}
+    80% {opacity: 0;transform: translateY(10px)}
+    100% {opacity: 0;transform: translateY(10px)}
+}
+
+.headline {
+    width: 600px;
+    margin-left: 100px;
+    margin-top: 100px;
+    text-align: right;
+    transform: skewY(-10deg);
+}
+h1 {
+    transform: translateX(-50px);
+    opacity: 0;
+    font-family: edo;
+    font-size: 68pt;
+    margin-bottom: 20px;
+    filter: drop-shadow(10px 10px 0px #c03469);
+    transition: all 1s cubic-bezier(.21,.9,.22,1)
+}
+.tagline {
+    transform: translateX(50px);
+    font-family: edo;
+    font-size: 21pt;
+    color: #e1b162;
+    transition: all 1s ease-out;
+}
+.first {
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+.floating {
+    position: absolute;
+    right: 100px;
+    margin-top: -35%;
+    width: 300px;
+    transform: rotate(20deg);
+}
+h2 {
+    font-family: Univers-Bold;
+    font-weight: normal;
+    letter-spacing: 5px;
+    display: inline-block;
+    line-height: 0em;
+    padding-bottom: 0.7em;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #3672a8;
+    margin-bottom: 20px;
+}
+.collumn {
+    width: 300px;
+    margin: 130px 30px;
+    display: inline-block;
+}
+.centering {
+    width: 730px;
+    margin: 0 auto;
+}
+.special {
+    width: 250px;
+    height: auto;
+    margin: 0 auto;
+    filter: drop-shadow(0px 0px 10px #f25e96);
+}
+#special {
+    text-decoration: none;
+    margin: 0 auto;
+}
+#special span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    font-family: edo;
+    font-size: 28pt;
+    margin: 0 auto;
+    margin-top: 20px;
+    filter: drop-shadow(0px 0px 5px #c03469);
+}
+.uno {
+    margin-top: -50px;
+    text-align: center;
+}
+.circle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background: #c03469;
+    border-radius: 50%;
+    filter:drop-shadow(0px 0px 20px #c03469);
+}
+.box{
+    text-align: center;
+}
+.new-box{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.event {
+    position: relative;
+    text-align: center;
+    margin: 65px;
+    margin-left: 0px;
+    width: 400px;
+    height: 330px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.event .event-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 80%;
+}
+.event .kuas {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10;
+    margin: 0 auto;
+    width: 100%;
+    height: 25%;
+    transform-origin: left;
+    transform: scaleX(0);
+    opacity: 0;
+    filter: drop-shadow(20px 10px 0px  #c03469) drop-shadow(0px 0px 20px #c03469);
+    transition: transform 1s cubic-bezier(.21,.9,.22,1);
+}
+.event span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 30;
+    font-family: edo;
+    font-size: 40pt;
+    opacity: 0;
+    filter: drop-shadow(0px 0px 20px #c03469);
+    transition: opacity 2s cubic-bezier(.21,.9,.22,1);
+}
+.event-description {
+    width: 35%;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+}
+.glowing-stick {
+    width: 60%;
+    height: 4px;
+    margin-top: 30px;
+    background: #e1b162;
+    filter: drop-shadow(0px 0px 4px #f25e96);
+}
+.box:nth-child(even) .event-description {
+    text-align: right;
+}
+.box:nth-child(even) .glowing-stick {
+    float: right;
+}
+.box:nth-child(even) .event {
+    margin-left: 100px;
+    margin-right: 0px;
+}
+.new-button {
+    width: 230px;
+    height: 80px;
+    padding-top: 10px;
+    text-align: center;
+    float: left;
+    margin-left: -50px;
+    margin-top: 5px;
+    background-image: url(Ingredients/goresan%20kecil.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.new-button span {
+    font-family: edo;
+    font-size: 24pt;
+    filter: drop-shadow(0px 0px 10px #c03469);
+}
+.volunteer {
+    margin-right: 100px;
+    margin-left: 50px;
+    width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.volunteer img {
+    width: 80%;
+    animation-name: chopped;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes chopped {
+    0% {transform: rotate(-10deg)}
+    50% {transform: rotate(-10deg)}
+    51% {transform: rotate(10deg)}
+    100% {transform: rotate(10deg)}
+}
+
+.quotes {
+    width: 68%;
+    padding: 50px;
+    padding-bottom: 80px;
+    background: #c03469;
+    filter: drop-shadow(15px 15px 0px #fff);
+}
+.quotes p{
+    font-family: Univers-Bold;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+.quotes .tanda-tangan {
+    font-family: edo;
+    font-size: 32pt;
+    float: right;
+    filter: drop-shadow(3px 3px 0px #e1b162);
+}
+.footer {
+    width: 92%;
+    padding: 4%;
+    background-color: #222;
+    margin-top: 100px;
+}
+.if-you-read-this-you-better-hire-me-because-im-broke {
+    text-align: right;
+    margin-top: -30px;
+}
+mark {
+    font-family: Univers;
+    font-size: 14pt;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #3672a8;
+}
+
+@media screen and (max-width: 850px) {
+    .sponsor {
+        width: auto;
+        padding: 30px;
+        display: none;
+    }
+    .scroll {
+        display: none;
+    }
+    .socmed {
+        top: 0 !important;
+        left: 0 !important;
+        right: none !important;
+        width: 7fcccccccc 0% !important;
+    }
+    .socmed a {
+        display: inline-block !important;
+        margin: 20px !important;
+    }
+    .logo {
+        width: 50%;
+        opacity: 0;
+        margin-top: 10%;
+        vertical-align: middle;
+    }
+    .co-logo {
+        display: none;
+    }
+    nav {
+        position: fixed;
+        top: 40;
+        right: 40;
+        width: 270px;
+        height: auto;
+    }
+    nav span {
+        display: none;
+    }
+    .nav-line {
+        display: none;
+    }
+    .menu {
+        top: -10px;
+        width: 30px;
+        height: 30px;
+    }
+    .menu div {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .logo {
+        width: 80% !important;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .headline {
+        width: 70%;
+        margin-left: 5%;
+        margin-top: 100px;
+        text-align: right;
+        transform: skewY(-10deg);
+    }
+    .floating {
+        display: none;
+    }
+    p.first {
+        margin: 0 auto;
+        width: 70%;
+    }
+    .h1 {
+        font-size: 24pt;
+    }
+}
+@media screen and (max-width: 800px) {
+    .event {
+        width: 80%;
+        margin-left: 0 !important;
+        margin: 0 auto;
+    }
+    .event-description {
+        margin: 0 auto;
+        margin-top: 50px;
+        width: 80%;
+        text-align: left;
+        display: block;
+    }
+    .box {
+        margin-top: 100px;
+    }
+    .box:nth-child(even) .event-description{
+        position: relative;
+        margin-top: 500px;
+    }
+    .box:nth-child(even) .event{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto !important;
+        margin-top: -600 !important;
+    }
+    .collumn {
+        display: block;
+        width: 70%;
+        margin: 100 auto !important;
+    }
+    .centering {
+        width: 100%;
+    }
+    .mampoes {
+        display: block !important;
+        margin: auto !important;
+        text-align: center;
+    }
+    .if-you-read-this-you-better-hire-me-because-im-broke {
+        display: block !important;
+        margin: auto !important;
+        text-align: center;
+    }
+    .hiding-page {
+        transform: translateX(150%) !important;
+    }
+    
+}
+p {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 1s cubic-bezier(.21,.9,.22,1);
+}
+.judul-fade-in {
+    transform: translateX(0px) !important;
+    opacity: 1 !important;
+}
+.p-fade-in {
+    transform: translateY(0px);
+    opacity: 1;
+}
+.fade-in {
+    opacity: 1 !important;
+}
+.kuasin {
+    transform: scaleX(1) !important;
+    opacity: 1 !important;
+}
+.socmeding {
+    transform: translateX(-30px);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+
+
+
+.hiding-page {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(225,176,98,1);
+    background: -moz-linear-gradient(-45deg, rgba(225,176,98,1) 0%, rgba(249,172,84,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(225,176,98,1)), color-stop(100%, rgba(249,172,84,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(225,176,98,1) 0%, rgba(249,172,84,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(225,176,98,1) 0%, rgba(249,172,84,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(225,176,98,1) 0%, rgba(249,172,84,1) 100%);
+    background: linear-gradient(135deg, rgba(225,176,98,1) 0%, rgba(249,172,84,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1b062', endColorstr='#f9ac54', GradientType=1 );
+    padding-top: 6%;
+    padding-left: 5%;
+    text-align: center;
+    z-index: 9999;
+    transform: translateX(120%) skewX(-30deg);
+    transition: transform 1s cubic-bezier(.21,.9,.22,1);
+}
+.hiding-page .buttonisasi {
+    line-height: 180%;
+    font-family: edo;
+    font-size: 56pt;
+    filter: drop-shadow(0px 0px 0px rgba(192,52,105,0.5));
+    transition: all .5s cubic-bezier(.21,.9,.22,1);
+}
+.hiding-page .buttonisasi:hover {
+    filter: drop-shadow(8px 8px 0px rgba(192,52,105,0.5));
+}
+.close {
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    width: 40px;
+    height: 40px;
+}
+.close img {
+    width: 100%;
+    height: 100%;
+}
+.hiding-page .socmede {
+    position: fixed;
+    bottom: 50;
+    left: 50;
+    width: 400px;
+    padding: 0px;
+}
+.hiding-page .socmede a img{
+    display: inline-block;
+    width: 30px;
+    height: auto;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.back-text {
+    position: fixed;
+    top: 30%;
+    font-family: edo;
+    font-size: 14vw;
+    opacity: .1;
+    transform: skewY(-10deg);
+}
+.orang-ini-yang-bikin {
+    position: fixed;
+    bottom: 60;
+    right: 50;    
+}
+
+@media screen and (max-width: 770px) {
+    .back-text {
+        font-size: 30vw;
+    }
+    .hiding-page .socmede {
+        left: 0;
+        right: 0;
+        bottom: 130;
+        margin: 0 auto;
+    }
+    .orang-ini-yang-bikin {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .buttonisasi {
+        font-size: 32pt !important;
+    }
+    .hiding-page {
+        padding-top: 100px;
+    }
+    .close {
+        top: 50px;
+        right: 50px;
+        width: 30px;
+        height: 30px;
+    }
+}
+.visible {
+    transform: translateX(0px) skewX(0deg) !important;
+}
